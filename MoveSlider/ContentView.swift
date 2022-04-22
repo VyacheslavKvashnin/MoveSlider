@@ -8,9 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var valueSlider = 0.5
+    @State private var randomNumber = Int.random(in: 0...100)
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack(spacing: 50) {
+            
+            Text("Подвиньте слайдер как можно ближе к: \(randomNumber)")
+            
+            HStack {
+                Text("0")
+                Slider(value: $valueSlider)
+                Text("100")
+            }
+            
+            Button("Проверь меня!") {
+                
+            }
+            
+            Button("Начать заново") {
+                
+            }
+        }
+        .padding()
     }
 }
 
