@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var valueSlider = 0.5
+    @State private var valueSlider: Float = 0.5
     @State private var randomNumber = Int.random(in: 0...100)
+    
     var body: some View {
         VStack(spacing: 50) {
             
@@ -17,7 +18,9 @@ struct ContentView: View {
             
             HStack {
                 Text("0")
-                Slider(value: $valueSlider)
+                
+                SliderUIKit(value: $valueSlider)
+                
                 Text("100")
             }
             
